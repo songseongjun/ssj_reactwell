@@ -1,4 +1,14 @@
+import {useState} from "react";
+
 export default function PostList({board}){
+
+  const {clicked,setClicked} =useState(null);
+
+  const handleClick = (e) => {
+    setClicked(!clicked);
+  }
+
+
   return (
       <ul>
         {board.map((b, i) => (<li key={i}><p>{b.title}</p><p>{b.content}</p></li>))}

@@ -15,7 +15,8 @@ export default function PostForm({onAdd}){
     setContent("");
   }
   return(
-       <form onSubmit={handleSubmit}>    // 저장할때 sumbit에서 공백안먹게하기위해  onChange는 input의값이바뀔때 사용하는것이다
+       <form onSubmit={handleSubmit}>
+          {/*저장할때 sumbit에서 공백안먹게하기위해  onChange는 input의값이바뀔때 사용하는것이다*/}
         <input type="text" value={title} onChange={handleTitle} placeholder="Title"/>
         <input type="text" value={content} onChange={handleContent} placeholder="Content"/>
         <button type="submit"> 저장</button>
